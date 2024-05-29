@@ -1,0 +1,264 @@
+      a {
+        text-decoration: none;
+        color: #858585;
+      }
+
+      a:hover {
+        color: #272727
+      }
+
+      body {
+        margin: 0px;
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        color: #858585;
+      }
+
+      .stranka {
+        width: 960px;
+        margin: auto;
+      }
+
+      header {
+        margin-top: 21px;
+        float: left;
+        width: 100%;
+      }
+
+      .logo {
+        float: left;
+      }
+
+      .logo_svg {
+        width: 100%;
+      }
+
+      nav {
+        float: left;
+      }
+
+      .odkazy {
+        float: left;
+        margin: 20px 20px 35px 45px;
+      }
+
+      .odkaz {
+        font-size: 22px;
+        margin: 0px 20px 10px 7px;
+      }
+
+      .jazyky {
+        float: right;
+        width: 186px;
+        margin: 12px 0px 0px 0px;
+      }
+
+      .cestina {
+        font-size: 19px;
+        margin: 0px 7px 0px 7px;
+        width: 100%;
+        float: right;
+        text-align: right;
+      }
+
+      .slovenstina {
+        font-size: 16px;
+        margin: 0px 7px 10px 7px;
+        float: right;
+        text-align: right;
+      }
+
+      .aktivni_odkaz {}
+
+      .horni_nadpis {
+        margin-top: 0px;
+        float: left;
+        width: 100%;
+        background: #F8F8F8;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 22px;
+        font-weight: normal;
+        float: left;
+        width: 96%;
+        padding: 2%;
+      }
+
+      .kde_soutezime {
+        margin-top: 0px;
+        float: left;
+        width: 100%;
+        background: #55C01B;
+        color: white;
+        padding: 0px 0px 53px 0px;
+      }
+
+      .kde_soutezime h2 {
+        text-align: center;
+        font-size: 46px;
+        font-weight: bold;
+        float: left;
+        width: 100%;
+        padding: 17px 0px 0px 0px;
+      }
+
+      .odkaz-ss {
+        border: 4px solid white;
+        float: left;
+        padding: 31px 10%;
+        width: 80%;
+        margin-bottom: 32px;
+        transition: 0.3s;
+      }
+
+      a.odkaz-ss:hover {
+        background: #357910;
+      }
+
+      .odkaz-ss-yt {
+        float: right;
+        width: 13%;
+        margin-right: 0px;
+      }
+
+      .kde_soutezime_text {
+        float: left;
+        color: white;
+        font-size: 27px;
+        font-weight: bold;
+        margin: 2px 0px 0px 0px;
+        text-align: center;
+      }
+
+      .kde_soutezime_odkazy {
+        width: 353px;
+        margin: auto;
+      }
+
+      .odkaz-ss-center {
+        text-align: center;
+      }
+
+      footer {
+        float: left;
+        width: 93%;
+        padding: 3%;
+        font-size: 21px;
+      }
+
+      .paticka_odkazy {
+        float: left;
+      }
+
+      .odkaz_paticka {
+        float: left;
+        width: 100%;
+        padding-bottom: 12px;
+      }
+
+      .paticka_kontakt {
+        float: right;
+      }
+
+      .paticka_kontakt_text {}
+
+      .paticka_kontakt_email {}
+
+      .paticka_kontakt_email {}
+
+      .paticka_jazyky {
+        margin: 1px auto;
+        width: 99px;
+        text-align: center;
+      }
+
+      .paticka_jazyky a {
+        width: 99px;
+        text-align: center;
+      }
+
+      .paticka {
+        float: left;
+        width: 100%;
+        margin-bottom: 30px;
+        border-bottom: 3px solid #5bbf3b;
+        padding-bottom: 24px;
+      }
+
+      . {}
+
+      . {}
+
+      . {}
+
+      . {}
+
+      . {}
+
+      @media screen and (max-width: 960px) {
+        .stranka {
+          width: 100%;
+          display: table;
+        }
+
+        .logo {
+          margin-left: 17px;
+        }
+
+        .odkazy {
+          width: 90%;
+          margin: 20px 0px 20px 6%;
+        }
+
+        .jazyky {
+          float: left;
+          margin-bottom: 15px;
+          margin-top: 0px;
+          display: none;
+        }
+
+        .cestina {
+          text-align: left;
+          float: left;
+          margin-left: 57px;
+        }
+
+        .slovenstina {
+          text-align: left;
+          float: left;
+          margin: 0px 7px 10px 57px;
+        }
+
+        .paticka_jazyky a {
+          margin-left: 0px;
+        }
+
+        .paticka_odkazy {
+          width: 100%;
+          text-align: center;
+          margin: 33px 0px 0px 0px;
+        }
+
+        .paticka_kontakt {
+          float: left;
+          width: 100%;
+          text-align: center;
+          margin: 29px 0px;
+        }
+
+        nav {
+          float: left;
+          width: 100%;
+        }
+
+        .kde_soutezime_odkazy {
+          width: 300px;
+          margin: auto;
+        }
+
+        .odkaz {
+          float: left;
+        }
+      }
