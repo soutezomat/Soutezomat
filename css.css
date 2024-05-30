@@ -62,7 +62,7 @@
       }
 
       .slovenstina {
-        font-size: 19px;
+        font-size: 16px;
         margin: 0px 7px 10px 7px;
         float: right;
         text-align: right;
@@ -150,6 +150,9 @@
 
       .paticka_odkazy {
         float: left;
+      }
+      .paticka_jazyky .slovenstina {
+        font-size: 21px;
       }
 
       .odkaz_paticka {
