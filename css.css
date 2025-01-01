@@ -4,7 +4,8 @@
       }
 
       a:hover {
-        color: #272727
+        color: #272727;
+        border-radius: 55px;
       }
 
       body {
@@ -27,6 +28,13 @@
 
       .logo {
         float: left;
+        margin-left: 0px;
+        transition: opacity 1s;
+      }
+
+      .logo:hover {
+      opacity: 0.8;
+      transition: opacity 1s;
       }
 
       .logo_svg {
@@ -55,7 +63,7 @@
 
       .cestina {
         font-size: 16px;
-        margin: 0px 7px 0px 7px;
+        margin: 0px 16px 0px 7px;
         width: 100%;
         float: right;
         text-align: right;
@@ -63,7 +71,7 @@
 
       .slovenstina {
         font-size: 16px;
-        margin: 0px 7px 10px 7px;
+        margin: 0px 16px 10px 7px;
         float: right;
         text-align: right;
       }
@@ -82,8 +90,8 @@
         font-size: 22px;
         font-weight: normal;
         float: left;
-        width: 96%;
-        padding: 2%;
+        width: 98%;
+        padding: 1%;
       }
 
       .kde_soutezime {
@@ -97,30 +105,41 @@
 
       .kde_soutezime h2 {
         text-align: center;
-        font-size: 46px;
+        font-size: 27px;
         font-weight: bold;
         float: left;
         width: 100%;
         padding: 17px 0px 0px 0px;
+        margin: 26px 0px;
       }
 
       .odkaz-ss {
-        border: 4px solid white;
         float: left;
-        padding: 31px 10%;
-        width: 80%;
-        margin-bottom: 32px;
+        padding: 2%;
+        width: 5%;
         transition: 0.3s;
+        margin: 0 0%;
       }
+      @media screen and (max-width: 600px) {
+        .odkaz-ss {
+          padding: 4%;
+          width: 8%;
+          }
+      }
+      @media screen and (max-width: 300px) {
+        .odkaz-ss {
+          padding: 6%;
+          width: 12%;
+          }
 
+      }
       a.odkaz-ss:hover {
         background: #357910;
       }
 
       .odkaz-ss-yt {
-        float: right;
-        width: 13%;
-        margin-right: 0px;
+        float: left;
+        width: 100%;
       }
 
       .kde_soutezime_text {
@@ -133,12 +152,15 @@
       }
 
       .kde_soutezime_odkazy {
-        width: 353px;
-        margin: auto;
+        width: auto;
+        margin: 0 16%;
+        float: left;
       }
 
       .odkaz-ss-center {
-        text-align: center;
+        text-align: left;
+        float: left;
+        clear: both;
       }
 
       footer {
@@ -257,11 +279,23 @@
         }
 
         .kde_soutezime_odkazy {
-          width: 300px;
-          margin: auto;
+        margin: 0 7%;
+        clear: both;
         }
 
         .odkaz {
           float: left;
+        }
+      }
+      @media screen and (max-width: 300px) {
+        .logo {
+          margin-left: 17px;
+          margin-right: 17px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        h1 {
+          width: 90%;
+          padding: 5%;
         }
       }
