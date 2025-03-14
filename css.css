@@ -47,12 +47,12 @@
 
       .odkazy {
         float: left;
-        margin: 20px 20px 35px 45px;
+        margin: 20px 20px 3px 45px;
       }
 
       .odkaz {
         font-size: 22px;
-        margin: 0px 20px 10px 7px;
+        margin: 0px 20px 0px 7px;
       }
 
       .jazyky {
@@ -84,8 +84,64 @@
         width: 100%;
         background: #F8F8F8;
       }
+      .souteze {
+        float: left;
+        width: 100%;
+        color: white;
+        padding: 60px 0px 60px 0px;
+        background: #55C01B;
+        margin-top: 23px;
+        border-radius: 5px;
+      }
+      .souteze_doprostred {
+    margin: auto;
+    width: 392px;
+}
+      .souteze_tlacitko {
+    float: left;
+    margin: 0px 0px;
+    margin-right: 31px;
+}
+      .pridat_soutez_tlacitko {float: left;}
 
-      h1 {
+.souteze_tlacitko a{
+    color: white;
+    border: 6px solid white;
+    padding: 12px 31px;
+    font-size: 23px;
+    border-radius: 60px;
+    float: left;
+}
+.souteze_tlacitko a:hover{
+    background: #ffffff;
+    color: #5bbf3b;
+}
+.pridat_soutez_tlacitko a{
+    color: white;
+    border: 6px solid white;
+    padding: 12px 31px;
+    font-size: 23px;
+    border-radius: 60px;
+    opacity: 0.8;
+    float: left;
+}
+.pridat_soutez_tlacitko a:hover{
+    background: #ffffff;
+    color: #5bbf3b;
+    opacity: 1;
+}
+
+
+      .kde_soutezime {
+        margin-top: 0px;
+        float: left;
+        width: 100%;
+        background: #55C01B;
+        color: white;
+        padding: 0px 0px 53px 0px;
+      }
+
+      .horni_nadpis h1 {
         text-align: center;
         font-size: 22px;
         font-weight: normal;
@@ -98,9 +154,11 @@
         margin-top: 0px;
         float: left;
         width: 100%;
-        background: #55C01B;
-        color: white;
+        background: #f8f8f8;
+        color: #636363;
         padding: 0px 0px 53px 0px;
+        margin-top: 17px;
+        border-radius: 5px;
       }
 
       .kde_soutezime h2 {
@@ -134,7 +192,7 @@
 
       }
       a.odkaz-ss:hover {
-        background: #357910;
+        background: #ffffff;
       }
 
       .odkaz-ss-yt {
@@ -234,7 +292,7 @@
 
         .odkazy {
           width: 90%;
-          margin: 20px 0px 20px 6%;
+          margin: 20px 0px 0px 6%;
         }
 
         .jazyky {
@@ -255,7 +313,10 @@
           float: left;
           margin: 0px 7px 10px 57px;
         }
-
+.souteze, .kde_soutezime {
+   
+    border-radius: 0px;
+}
         .paticka_jazyky a {
           margin-left: 0px;
         }
@@ -294,8 +355,12 @@
         }
       }
       @media screen and (max-width: 450px) {
-        h1 {
-          width: 90%;
-          padding: 5%;
-        }
+     .souteze_tlacitko {
+      margin-left: 31px;
+}
+.pridat_soutez_tlacitko {
+       margin-left: 31px;
+    margin-top: 24px;
+}
+        
       }
