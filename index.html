@@ -38,6 +38,28 @@
             display: none;
         }
 
+    #krok2, #krok3 {
+      display: none;
+    }
+
+    button {
+      padding: 17px 20px;
+      margin: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      background: #1265F8;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin: 5px;
+    }
+
         .controls {
             text-align: center;
             margin-top: 20px;
@@ -89,38 +111,26 @@ background: #5CB728;
     margin-top: 15px;
     transition: all 0.3s ease;
     font-weight: 300;
-    display: none;
     margin: auto;
     margin-bottom: 26px;
     font-weight: bold;
+    display: block;
         }
 
         .start-btn:hover {
             background: #4A9A20;
         }
 
-        @media (max-width: 600px) {
-            .start-btn {
-                display: block; /* Zobrazí se jen na mobilech */
-            }
-.instrukce-pc {
-                display: none;            }
 
-
-        }
 
         .game-over {
-    position: absolute;
-    top: 3%;
-    left: 3%;
+     position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
     background: #ffffff;
-    color: #333333;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    display: none;
-    width: 79%;
+display:none
         }
 
         .game-over h2 {
@@ -178,7 +188,7 @@ background: #5CB728;
         .control-btn:nth-child(3) { grid-column: 3; grid-row: 2; }
         .control-btn:nth-child(4) { grid-column: 2; grid-row: 3; }
 
-        @media (max-width: 600px) {
+        @media (max-width: 800px) {
             .mobile-controls {
                 display: grid;
             }
@@ -209,7 +219,36 @@ background: #5CB728;
     border: 2px solid #00A1FF;
     border-radius: 3px;">
             <canvas id="gameCanvas" width="400" height="400"></canvas>
-            
+
+
+	<div class="game-over" id="gameOver" style="">
+        <p style="font-size: 20px;
+    text-align: center;
+    color: #353535;
+    margin-top: 56px;">Vaše skóre: <b id="finalScore">0</b></p>
+
+<div id="krok1">
+
+  <!-- Tlačítko pro sdílení na Facebooku -->
+  <button id="btnFbShare" onclick="zobrazitKrok2(); sdiletNaFacebook();">Sdílet na Facebooku</button>
+
+</div>
+<div id="krok2">
+
+  <!-- Skryté pole a tlačítko 1c -->
+  <input type="text" id="inputField" placeholder="1b">
+  <button id="btn1c" onclick="zobrazitKrok3()">1c</button>
+</div>
+<div id="krok3">
+
+        <button class="restart-btn" onclick="restartGame(); zobrazitKrok1();">Hrát znovu</button>
+</div>
+
+
+
+
+    </div>
+
             <!-- Úvodní overlay -->
             <div class="start-overlay" id="startOverlay" style="display: none;">
              <div style="
@@ -229,7 +268,10 @@ background: #5CB728;
     margin-bottom: 30px;
 "><img src="Ikony/Had.svg" style="
     text-align: center;
-"></div><div class="instrukce-pc"><b>Stiskněte</b> libovolnou <b>šipku</b> na klávesnici</div>
+"></div>
+
+<!-- <div class="instrukce-pc"><b>Stiskněte</b> libovolnou <b>šipku</b> na klávesnici</div> -->
+
 </div>
 <button class="start-btn" onclick="startGameMobile()">Začít hru</button>
 <div style="
@@ -242,7 +284,7 @@ background: #5CB728;
     background: #F4F4F4;
     padding: 20px;
     border-radius: 13px;
-">Hrajeme o dárkové poukazy<br>1 000 Kč a 200 Kč
+">Hrajeme o dárkové poukazy<br>1 000 Kč
 <div style="
     margin: auto;
     width: 81px;
@@ -262,11 +304,28 @@ background: #5CB728;
 	-->
     </div>
 
-    <div class="game-over" id="gameOver" style="">
-        <h2>Konec hry!</h2>
-        <p>Vaše finální skóre: <span id="finalScore">0</span></p>
-        <button class="restart-btn" onclick="restartGame()">Hrát znovu</button>
-    </div>
+  <script>
+    function zobrazitKrok1() {
+      document.getElementById("krok3").style.display = "none";
+      document.getElementById("krok1").style.display = "block";
+    }
+
+  function sdiletNaFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    window.open(facebookShareUrl, '_blank');
+  }
+
+    function zobrazitKrok2() {
+      document.getElementById("krok1").style.display = "none";
+      document.getElementById("krok2").style.display = "block";
+    }
+
+    function zobrazitKrok3() {
+      document.getElementById("krok2").style.display = "none";
+      document.getElementById("krok3").style.display = "block";
+    }
+  </script>
 
     <script>
         const canvas = document.getElementById('gameCanvas');
