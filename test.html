@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta property="og:image" content="https://soutezomat.cz/test.png" />
+
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -38,7 +39,7 @@
   <script>
     // Událost pro sdílení na Facebooku
     document.getElementById('btnFbShare').addEventListener('click', function() {
-      const url = encodeURIComponent('https://soutezomat.cz');
+      const url = encodeURIComponent('https://soutezomat.cz/test.html');
       const fbWindow = window.open(
         `https://www.facebook.com/sharer/sharer.php?u=${url}`,
         '_blank',
