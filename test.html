@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+<meta property="og:image" content="https://soutezomat.cz/test.png" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+  <title>Facebook Sdílení a Interakce</title>
+  <style>
+    #inputField, #btn1c {
+      display: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tlačítko pro sdílení na Facebooku -->
+  <button id="btnFbShare">Sdílet na Facebooku</button>
+
+  <!-- Skryté pole a tlačítko 1c -->
+  <input type="text" id="inputField" placeholder="1b">
+  <button id="btn1c">1c</button>
+
+  <script>
+    // Událost pro sdílení na Facebooku
+    document.getElementById('btnFbShare').addEventListener('click', function() {
+      const url = encodeURIComponent('https://soutezomat.cz');
+      const fbWindow = window.open(
+        `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+        '_blank',
+        'width=600,height=400'
+      );
+
+      // Skryje tlačítko a zobrazí další prvky
+      this.style.display = 'none';
+      document.getElementById('inputField').style.display = 'inline-block';
+      document.getElementById('btn1c').style.display = 'inline-block';
+    });
+
+    // Návrat zpět pomocí tlačítka 1c
+    document.getElementById('btn1c').addEventListener('click', function() {
+      this.style.display = 'none';
+      document.getElementById('inputField').style.display = 'none';
+      document.getElementById('btnFbShare').style.display = 'inline-block';
+    });
+  </script>
+
+</body
