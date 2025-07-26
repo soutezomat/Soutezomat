@@ -375,3 +375,14 @@ footer {height: 18px;float: left;width: 100%;}
 	}
 
 }
+@media screen and (max-width: 404px) {
+    .stranka {
+        width: 100%;
+    }
+#gameCanvas {
+        width: 100%;
+    }
+.hrajeme_o {
+       display:none
+    }
+}
