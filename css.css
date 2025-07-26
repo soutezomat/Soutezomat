@@ -16,20 +16,21 @@ body {
 }
 
 .stranka {
-	width: 960px;
+	width: 404px;
 	margin: auto;
 }
 
 header {
-	margin-top: 21px;
-	float: left;
-	width: 100%;
+	margin-top: 14px;
+	width: 246px;
+	margin: auto;
 }
 
 .logo {
 	float: left;
 	margin-left: 0px;
 	transition: opacity 1s;
+	margin: 44px 0px;
 }
 
 .logo:hover {
@@ -58,7 +59,7 @@ nav {
 .jazyky {
 	float: right;
 	width: 186px;
-	margin: 12px 0px 0px 0px;
+	margin: 17px 0px 0px 0px;
 }
 
 .cestina {
@@ -88,22 +89,18 @@ nav {
 .souteze {
 	float: left;
 	width: 100%;
-	color: white;
-	padding: 60px 0px 60px 0px;
-	background: #55C01B;
-	margin-top: 23px;
-	border-radius: 5px;
+	padding: 0px;
+	position: relative;
 }
 
 .souteze_doprostred {
 	margin: auto;
-	width: 392px;
+	width: 160px;
 }
 
 .souteze_tlacitko {
 	float: left;
 	margin: 0px 0px;
-	margin-right: 31px;
 }
 
 .pridat_soutez_tlacitko {
@@ -163,10 +160,10 @@ nav {
 	margin-top: 0px;
 	float: left;
 	width: 100%;
-	background: #f8f8f8;
+	background: white;
 	color: #636363;
-	padding: 0px 0px 53px 0px;
-	margin-top: 17px;
+	padding: 40px 0px 40px 0px;
+	margin-top: 0px;
 	border-radius: 5px;
 }
 
@@ -183,23 +180,21 @@ nav {
 .odkaz-ss {
 	float: left;
 	padding: 2%;
-	width: 5%;
 	transition: 0.3s;
 	margin: 0 0%;
 	opacity: 0.7;
+	width: 40px;
 }
 
 @media screen and (max-width: 600px) {
 	.odkaz-ss {
-		padding: 4%;
-		width: 8%;
+
 	}
 }
 
 @media screen and (max-width: 300px) {
 	.odkaz-ss {
-		padding: 6%;
-		width: 12%;
+
 	}
 
 }
@@ -224,9 +219,8 @@ a.odkaz-ss:hover {
 }
 
 .kde_soutezime_odkazy {
-	width: auto;
-	margin: 0 16%;
-	float: left;
+	width: 40px;
+	margin: 0 auto;
 }
 
 .odkaz-ss-center {
@@ -235,12 +229,7 @@ a.odkaz-ss:hover {
 	clear: both;
 }
 
-footer {
-	float: left;
-	width: 93%;
-	padding: 3%;
-	font-size: 21px;
-}
+footer {height: 18px;float: left;width: 100%;}
 
 .paticka_odkazy {
 	float: left;
@@ -281,7 +270,7 @@ footer {
 	float: left;
 	width: 100%;
 	margin-bottom: 30px;
-	border-bottom: 3px solid #5bbf3b;
+	border-bottom: 3px solid #6ace47;
 	padding-bottom: 24px;
 }
 
@@ -297,8 +286,6 @@ footer {
 
 @media screen and (max-width: 960px) {
 	.stranka {
-		width: 100%;
-		display: table;
 	}
 
 	.logo {
@@ -358,8 +345,6 @@ footer {
 	}
 
 	.kde_soutezime_odkazy {
-		margin: 0 7%;
-		clear: both;
 	}
 
 	.odkaz {
