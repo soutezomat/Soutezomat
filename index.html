@@ -61,7 +61,6 @@
         height: 100%;
          /* Vnitřní rámeček 2px, černá barva */
         border-radius: 3px;
-	    pointer-events: none;
 
         }
 
@@ -76,6 +75,38 @@
             margin: 5px 0;
             font-size: 1.1em;
             color: #666666;
+        }
+
+
+        .start-btn {
+background: #5CB728;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-weight: 300;
+    display: none;
+    margin: auto;
+    margin-bottom: 26px;
+    font-weight: bold;
+        }
+
+        .start-btn:hover {
+            background: #4A9A20;
+        }
+
+        @media (max-width: 600px) {
+            .start-btn {
+                display: block; /* Zobrazí se jen na mobilech */
+            }
+.instrukce-pc {
+                display: none;            }
+
+
         }
 
         .game-over {
@@ -198,8 +229,10 @@
     margin-bottom: 30px;
 "><img src="Ikony/Had.svg" style="
     text-align: center;
-"></div><b>Stiskněte</b> libovolnou <b>šipku</b> na klávesnici
-</div><div style="
+"></div><div class="instrukce-pc"><b>Stiskněte</b> libovolnou <b>šipku</b> na klávesnici</div>
+</div>
+<button class="start-btn" onclick="startGameMobile()">Začít hru</button>
+<div style="
     margin: auto;
     width: 279px;
     text-align: center;
@@ -220,12 +253,13 @@
             </div>
         </div>
 
-        <div class="mobile-controls">
+        <!--<div class="mobile-controls">
             <button class="control-btn" onclick="changeDirection('up')">🔼</button>
             <button class="control-btn" onclick="changeDirection('left')">◀️</button>
             <button class="control-btn" onclick="changeDirection('right')">▶️</button>
             <button class="control-btn" onclick="changeDirection('down')">🔽</button>
         </div>
+	-->
     </div>
 
     <div class="game-over" id="gameOver" style="">
@@ -425,6 +459,10 @@ function changeDirection(direction) {
         inputQueue.push(direction);
     }
 }
+        // Spuštění hry na mobilním zařízení
+        function startGameMobile() {
+            changeDirection('right'); // Spustí hru směrem doprava
+        }
 
         // Detekce dotyku
         function handleTouchStart(e) {
