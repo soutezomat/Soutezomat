@@ -109,7 +109,7 @@
 background: #5CB728;
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 17px 20px;
     font-size: 1.1em;
     border-radius: 4px;
     cursor: pointer;
@@ -117,7 +117,6 @@ background: #5CB728;
     transition: all 0.3s ease;
     font-weight: 300;
     margin: auto;
-    margin-bottom: 26px;
     font-weight: bold;
     display: block;
         }
@@ -232,21 +231,56 @@ display:none
     color: #353535;
     margin-top: 56px;">Vaše skóre: <b id="finalScore">0</b></p>
 
-<div id="krok1">
-
+<div id="krok1" style="
+    margin: auto;
+    width: 319px;
+    margin-top: 33px;
+">
+<span class="" style="
+    font-weight: bold;
+    color: #000000;
+    margin-right: 10px;
+">1. krok</span>
   <!-- Tlačítko pro sdílení na Facebooku -->
   <button id="btnFbShare" onclick="zobrazitKrok2(); sdiletNaFacebook();">Sdílet na Facebooku</button>
+<!-- Box: Hrajeme o dárkový poukaz -->
+<div class="hrajeme_o">Hrajeme o dárkový poukaz<br>1 000 Kč
+	<div class="hrajeme_o_alza_logo">
+		<img src="Ikony/Alza logo.svg">
+	</div>
+</div>
+
 
 </div>
-<div id="krok2">
+
+
+<div id="krok2" style="width: 319px; margin: auto; margin-top: 33px;">
 
   <!-- Skryté pole a tlačítko 1c -->
-  <input type="text" id="inputField" placeholder="1b">
-  <button id="btn1c" onclick="zobrazitKrok3()">1c</button>
+  <input type="text" id="inputField" placeholder="Váš e-mail" style="padding: 15px; font-size: 17px;    width: 200px;">
+  <button class="start-btn" onclick="zobrazitKrok3()" style="margin-top: 11px;    float: right;
+    margin: 5px;">Uložit</button>
+<!-- Box: Hrajeme o dárkový poukaz -->
+<div class="hrajeme_o">Hrajeme o dárkový poukaz<br>1 000 Kč
+	<div class="hrajeme_o_alza_logo">
+		<img src="Ikony/Alza logo.svg">
+	</div>
 </div>
-<div id="krok3">
 
-        <button class="restart-btn" onclick="restartGame(); zobrazitKrok1();">Hrát znovu</button>
+
+</div>
+<div id="krok3" style="margin-top: 33px;">
+
+
+
+        <button class="start-btn" onclick="restartGame(); zobrazitKrok1();">Hrát znovu</button>
+
+<!-- Box: Hrajeme o dárkový poukaz -->
+<div class="hrajeme_o">Hrajeme o dárkový poukaz<br>1 000 Kč
+	<div class="hrajeme_o_alza_logo">
+		<img src="Ikony/Alza logo.svg">
+	</div>
+</div>
 </div>
 
 
@@ -279,34 +313,21 @@ display:none
 
 </div>
 <button class="start-btn" onclick="startGameMobile()">Začít hru</button>
-<div style="
-    margin: auto;
-    width: 279px;
-    text-align: center;
-    font-size: 15px;
-    color: #5B5B5B;
-    margin: 0px auto;
-    background: #F4F4F4;
-    padding: 20px;
-    border-radius: 13px;
-">Hrajeme o dárkový poukaz<br>1 000 Kč
-<div style="
-    margin: auto;
-    width: 81px;
-    margin-top: 16px;
-"><img src="Ikony/Alza logo.svg" style="
-    text-align: center;
-"></div></div></div><div style=""></div>
+
+
+<!-- Box: Hrajeme o dárkový poukaz -->
+<div class="hrajeme_o">Hrajeme o dárkový poukaz<br>1 000 Kč
+	<div class="hrajeme_o_alza_logo">
+		<img src="Ikony/Alza logo.svg">
+	</div>
+</div>
+
+</div>
+
             </div>
         </div>
 
-        <!--<div class="mobile-controls">
-            <button class="control-btn" onclick="changeDirection('up')">🔼</button>
-            <button class="control-btn" onclick="changeDirection('left')">◀️</button>
-            <button class="control-btn" onclick="changeDirection('right')">▶️</button>
-            <button class="control-btn" onclick="changeDirection('down')">🔽</button>
-        </div>
-	-->
+
     </div>
 
   <script>
@@ -585,26 +606,22 @@ function changeDirection(direction) {
             }
 
             switch(e.code) {
-                case 'ArrowUp':
-                case 'KeyW':
-                    e.preventDefault();
-                    changeDirection('up');
-                    break;
-                case 'ArrowDown':
-                case 'KeyS':
-                    e.preventDefault();
-                    changeDirection('down');
-                    break;
-                case 'ArrowLeft':
-                case 'KeyA':
-                    e.preventDefault();
-                    changeDirection('left');
-                    break;
-                case 'ArrowRight':
-                case 'KeyD':
-                    e.preventDefault();
-                    changeDirection('right');
-                    break;
+    case 'ArrowUp':
+        e.preventDefault();
+        changeDirection('up');
+        break;
+    case 'ArrowDown':
+        e.preventDefault();
+        changeDirection('down');
+        break;
+    case 'ArrowLeft':
+        e.preventDefault();
+        changeDirection('left');
+        break;
+    case 'ArrowRight':
+        e.preventDefault();
+        changeDirection('right');
+        break;
                 case 'Space':
                     e.preventDefault();
                     if (!gameRunning) restartGame();
