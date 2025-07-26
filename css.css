@@ -382,6 +382,10 @@ footer {height: 18px;float: left;width: 100%;}
 #gameCanvas {
         width: 100%;
     }
+
+}
+@media screen and (max-width: 375px) {
+
 .hrajeme_o {
        display:none
     }
