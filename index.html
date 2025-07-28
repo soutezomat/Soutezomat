@@ -34,7 +34,18 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+
+
+  // Funkce musí být připojena na window, aby fungovala s onclick
+  window.zobrazitKrok3 = function () {
+    const email = document.getElementById("inputField").value;
+    const emailRef = ref(db, "emails");
+    push(emailRef, { email: email });
+
+    document.getElementById("krok2").style.display = "none";
+    document.getElementById("krok3").style.display = "block";
+    localStorage.setItem("krok2Kliknut", "true");
+  };
 </script>
    </head>
    <body>
@@ -163,17 +174,6 @@ function zobrazitKrok2() {
 }
 
 
-
-  window.zobrazitKrok3 = function () {
-    const email = document.getElementById("inputField").value;
-    const emailRef = ref(db, "emails");
-    push(emailRef, { email: email });
-
-
-    document.getElementById("krok2").style.display = "none";
-    document.getElementById("krok3").style.display = "block";
-    localStorage.setItem("krok2Kliknut", "true");
-}
 
 function zobrazitKrok1() {
     document.getElementById("krok3").style.display = "none";
