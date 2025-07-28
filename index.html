@@ -164,15 +164,15 @@ function zobrazitKrok2() {
 
 
 
-window.zobrazitKrok3 = function () {
+  window.zobrazitKrok3 = function () {
+    const email = document.getElementById("inputField").value;
+    const emailRef = ref(db, "emails");
+    push(emailRef, { email: email });
+
+
     document.getElementById("krok2").style.display = "none";
     document.getElementById("krok3").style.display = "block";
     localStorage.setItem("krok2Kliknut", "true");
-
-    const email = document.getElementById("inputField").value;
-    const emailRef = firebase.database().ref("emails");
-    emailRef.push({ email: email });
-
 }
 
 function zobrazitKrok1() {
