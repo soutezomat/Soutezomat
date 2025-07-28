@@ -164,7 +164,7 @@ function zobrazitKrok2() {
 
 
 
-function zobrazitKrok3() {
+window.zobrazitKrok3 = function () {
     document.getElementById("krok2").style.display = "none";
     document.getElementById("krok3").style.display = "block";
     localStorage.setItem("krok2Kliknut", "true");
