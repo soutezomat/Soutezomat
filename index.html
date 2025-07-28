@@ -41,15 +41,13 @@ const email = document.getElementById("inputField").value.trim();
 
 if (email !== "") {
   // Uložení do Firebase
-  firebase.database().ref("emails").push({
-    email: email
-  });
+    const emailRef = ref(window.db, "emails");
+    push(emailRef, { email: email });
 } else {
   console.log("Prázdné e-mailové pole se neukládá.");
 }
 
-    const emailRef = ref(window.db, "emails");
-    push(emailRef, { email: email });
+
 
     document.getElementById("krok2").style.display = "none";
     document.getElementById("krok3").style.display = "block";
