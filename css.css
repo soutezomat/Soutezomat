@@ -1,3 +1,11 @@
+body {
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+
+	font-optical-sizing: auto;
+	color: #858585;
+}
+
 a {
 	text-decoration: none;
 	color: #858585;
@@ -6,13 +14,6 @@ a {
 a:hover {
 	color: #272727;
 	border-radius: 55px;
-}
-
-body {
-	margin: 0px;
-	font-family: "Jost", sans-serif;
-	font-optical-sizing: auto;
-	color: #858585;
 }
 
 .stranka {
@@ -33,56 +34,18 @@ header {
 	margin: 44px 0px;
 }
 
+.logo_ikona{
+	display:none
+}
+
+
 .logo:hover {
 	opacity: 0.8;
 	transition: opacity 1s;
 }
 
-.logo_svg {
-	width: 100%;
-}
+main {}
 
-nav {
-	float: left;
-}
-
-.odkazy {
-	float: left;
-	margin: 20px 20px 3px 45px;
-}
-
-.odkaz {
-	font-size: 22px;
-	margin: 0px 20px 0px 7px;
-}
-
-.hrajeme_o  {margin: auto;width: 279px;text-align: center;font-size: 15px;color: #5B5B5B;margin: 0px auto;background: #F4F4F4;padding: 20px;border-radius: 13px;margin-top: 30px;}
-
-.hrajeme_o_alza_logo {    margin: auto;
-    width: 81px;
-    margin-top: 16px;}
-.jazyky {
-	float: right;
-	width: 186px;
-	margin: 17px 0px 0px 0px;
-}
-
-.cestina {
-	font-size: 16px;
-	margin: 0px 16px 0px 7px;
-	width: 100%;
-	float: right;
-	text-align: right;
-}
-
-.slovenstina {
-	font-size: 16px;
-	margin: 0px 16px 10px 7px;
-	float: right;
-	text-align: right;
-}
-
-.aktivni_odkaz {}
 
 .horni_nadpis {
 	margin-top: 0px;
@@ -98,49 +61,190 @@ nav {
 	position: relative;
 }
 
-.souteze_doprostred {
+/* Hra had - Zacatek */
+.game-container {}
+
+.hra_box {
+	position: relative;
+	border: 2px solid #00A1FF;
+	border-radius: 3px;
+}
+
+canvas {
+	background: #fafafa;
+	/* Vnitřní rámeček 2px, černá barva */
+}
+
+.score {
+	font-size: 1.5em;
+	font-weight: 300;
+	margin: 20px 0;
+	text-align: center;
+	color: #333333;
+	display: none;
+}
+
+#krok2,
+#krok3 {
+	display: none;
+}
+
+button {
+	padding: 17px 20px;
+	margin: 5px;
+	font-size: 1.1em;
+	cursor: pointer;
+	background: #5CB728;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+
+}
+
+input {
+	padding: 8px;
+	font-size: 16px;
+	margin: 5px;
+}
+
+.start-overlay {
+	position: absolute;
+	top: 0px;
+	background: #ffffff;
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+.start-overlay p {
+	margin: 5px 0;
+	font-size: 1.1em;
+	color: #666666;
+}
+
+.start-overlay_center {
 	margin: auto;
-	width: 160px;
+	width: 100%;
 }
 
-.souteze_tlacitko {
-	float: left;
-	margin: 0px 0px;
+.start-overlay_center_2 {
+	margin: auto;
+	width: 257px;
+	text-align: center;
+	font-size: 20px;
+	color: #353535;
+	margin: 59px auto 45px auto;
 }
 
-.pridat_soutez_tlacitko {
-	float: left;
+.start-overlay_center_3 {
+	margin: auto;
+	width: 60px;
+	margin-top: 32px;
+	margin-bottom: 30px;
 }
 
-.souteze_tlacitko a {
+.start-btn {
+	background: #5CB728;
 	color: white;
-	border: 6px solid white;
-	padding: 12px 31px;
-	font-size: 23px;
-	border-radius: 60px;
-	float: left;
+	margin: auto;
+	font-weight: bold;
+	display: block;
 }
 
-.souteze_tlacitko a:hover {
-	background: #ffffff;
-	color: #5bbf3b;
+.start-btn:hover {
+	background: #4A9A20;
 }
 
-.pridat_soutez_tlacitko a {
+#btnFbShare {
+	background: #1265F8;
 	color: white;
-	border: 6px solid white;
-	padding: 12px 31px;
-	font-size: 23px;
-	border-radius: 60px;
-	opacity: 0.8;
-	float: left;
+	font-weight: bold;
 }
 
-.pridat_soutez_tlacitko a:hover {
-	background: #ffffff;
-	color: #5bbf3b;
-	opacity: 1;
+#btnFbShare:hover {
+	background: #0044bc;
 }
+
+.game-over {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	background: #ffffff;
+	display: none
+}
+
+.game-over p {
+	font-size: 20px;
+	text-align: center;
+	color: #353535;
+	margin-top: 56px;
+}
+
+#krok1 {
+	margin: auto;
+	width: 319px;
+	margin-top: 33px;
+}
+
+.tlacitko_facebook_kontejner {
+	margin: auto;
+	width: 291px;
+}
+
+.krok_cislo {
+	font-weight: bold;
+	color: #000000;
+	margin-right: 10px;
+}
+
+#krok2 {
+	width: 319px;
+	margin: auto;
+	margin-top: 33px;
+}
+
+#krok2 input {
+	padding: 15px;
+	font-size: 17px;
+	width: 200px
+}
+
+.save_email {
+	margin-top: 11px;
+	float: right;
+	margin: 5px;
+}
+
+#krok3 {
+	margin-top: 33px;
+}
+
+.hrajeme_o {
+	margin: auto;
+	width: 279px;
+	text-align: center;
+	font-size: 15px;
+	color: #5B5B5B;
+	margin: 0px auto;
+	background: #F4F4F4;
+	padding: 20px;
+	border-radius: 13px;
+	margin-top: 30px;
+}
+
+.hrajeme_o_alza_logo {
+	margin: auto;
+	width: 81px;
+	margin-top: 16px;
+}
+
+.aktivni_odkaz {}
+
+/* Hra had - Konec */
 
 
 .kde_soutezime {
@@ -150,15 +254,6 @@ nav {
 	background: #55C01B;
 	color: white;
 	padding: 0px 0px 53px 0px;
-}
-
-.horni_nadpis h1 {
-	text-align: center;
-	font-size: 22px;
-	font-weight: normal;
-	float: left;
-	width: 98%;
-	padding: 1%;
 }
 
 .kde_soutezime {
@@ -172,14 +267,9 @@ nav {
 	border-radius: 5px;
 }
 
-.kde_soutezime h2 {
-	text-align: center;
-	font-size: 27px;
-	font-weight: bold;
-	float: left;
-	width: 100%;
-	padding: 17px 0px 0px 0px;
-	margin: 26px 0px;
+.kde_soutezime_odkazy {
+	width: 40px;
+	margin: 0 auto;
 }
 
 .odkaz-ss {
@@ -191,41 +281,9 @@ nav {
 	width: 40px;
 }
 
-@media screen and (max-width: 600px) {
-	.odkaz-ss {
-
-	}
-}
-
-@media screen and (max-width: 300px) {
-	.odkaz-ss {
-
-	}
-
-}
-
 a.odkaz-ss:hover {
 	background: #ffffff;
 	opacity: 1;
-}
-
-.odkaz-ss-yt {
-	float: left;
-	width: 100%;
-}
-
-.kde_soutezime_text {
-	float: left;
-	color: white;
-	font-size: 27px;
-	font-weight: bold;
-	margin: 2px 0px 0px 0px;
-	text-align: center;
-}
-
-.kde_soutezime_odkazy {
-	width: 40px;
-	margin: 0 auto;
 }
 
 .odkaz-ss-center {
@@ -234,68 +292,26 @@ a.odkaz-ss:hover {
 	clear: both;
 }
 
-footer {height: 18px;float: left;width: 100%;}
-
-.paticka_odkazy {
-	float: left;
-}
-
-.paticka_jazyky .slovenstina {
-	font-size: 21px;
-}
-
-.odkaz_paticka {
+.odkaz-ss-yt {
 	float: left;
 	width: 100%;
-	padding-bottom: 12px;
 }
 
-.paticka_kontakt {
-	float: right;
+
+@media screen and (max-width: 600px) {
+	.odkaz-ss {}
 }
 
-.paticka_kontakt_text {}
+@media screen and (max-width: 300px) {
+	.odkaz-ss {}
 
-.paticka_kontakt_email {}
-
-.paticka_kontakt_email {}
-
-.paticka_jazyky {
-	margin: 1px auto;
-	width: 99px;
-	text-align: center;
 }
 
-.paticka_jazyky a {
-	width: 99px;
-	text-align: center;
-}
-
-.paticka {
-	float: left;
-	width: 100%;
-	margin-bottom: 30px;
-	border-bottom: 3px solid #6ace47;
-	padding-bottom: 24px;
-}
-
-. {}
-
-. {}
-
-. {}
-
-. {}
-
-. {}
 
 @media screen and (max-width: 960px) {
-	.stranka {
-	}
+	.stranka {}
 
-	.logo {
-		margin-left: 17px;
-	}
+	.logo {}
 
 	.odkazy {
 		width: 90%;
@@ -349,8 +365,7 @@ footer {height: 18px;float: left;width: 100%;}
 		width: 100%;
 	}
 
-	.kde_soutezime_odkazy {
-	}
+	.kde_soutezime_odkazy {}
 
 	.odkaz {
 		float: left;
@@ -375,18 +390,68 @@ footer {height: 18px;float: left;width: 100%;}
 	}
 
 }
+
 @media screen and (max-width: 404px) {
-    .stranka {
-        width: 100%;
-    }
-#gameCanvas {
-        width: 100%;
-    }
+	.stranka {
+		width: 100%;
+	}
+
+	#gameCanvas {
+		width: 100%;
+	}
 
 }
+
 @media screen and (max-width: 375px) {
 
-.hrajeme_o {
-       display:none
-    }
+	.hrajeme_o {
+		display: none
+	}
+}
+
+@media screen and (max-width: 360px) {
+header {
+    width: fit-content;
+    margin: auto;
+}
+
+.logo{
+	display:none
+}
+.logo_ikona{
+	float: left;
+	margin-left: 0px;
+	transition: opacity 1s;
+	margin: 44px 0px;
+	display:block
+}
+#krok2{
+    width: 100%;
+    margin-left: 11px;	
+}
+#krok2 input {
+    width: 65%;
+}
+
+.save_email{
+   float: left;	
+        width: 115px;
+}
+#btnFbShare{
+font-size: 88%;
+display: block;
+}
+}
+
+@media screen and (max-width: 280px) {
+
+.start-overlay_center_3 {
+display:none
+}
+.krok_cislo{
+display:none
+}
+
+
+
 }
