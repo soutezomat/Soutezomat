@@ -34,6 +34,17 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  window.db = getDatabase(app); // 💡 připojeno na window
+
+  window.zobrazitKrok3 = function () {
+    const email = document.getElementById("inputField").value;
+    const emailRef = ref(window.db, "emails");
+    push(emailRef, { email: email });
+
+    document.getElementById("krok2").style.display = "none";
+    document.getElementById("krok3").style.display = "block";
+    localStorage.setItem("krok2Kliknut", "true");
+  };
 
 
   // Funkce musí být připojena na window, aby fungovala s onclick
