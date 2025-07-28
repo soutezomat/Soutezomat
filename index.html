@@ -176,22 +176,8 @@ function zobrazitKrok3() {
     localStorage.setItem("krok2Kliknut", "true");
 
     const email = document.getElementById("inputField").value;
-
-    if (email.trim() === "") {
-      alert("Zadejte e-mail.");
-      return;
-    }
-
     const emailRef = firebase.database().ref("emails");
-    emailRef.push({
-      email: email,
-      timestamp: new Date().toISOString()
-    }).then(() => {
-      alert("E-mail byl uložen!");
-    }).catch((error) => {
-      console.error("Chyba při ukládání:", error);
-      alert("Nepodařilo se uložit.");
-    });
+    emailRef.push({ email: email });
 
 }
 
