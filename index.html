@@ -12,14 +12,10 @@
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
 <!-- Firebase ulozeni emailu -->
-<!-- Firebase App (core SDK) -->
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
-
-<!-- Firebase Realtime Database -->
-<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
-
 
 <script type="module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
