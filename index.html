@@ -37,7 +37,17 @@
   const app = initializeApp(firebaseConfig);
   window.db = getDatabase(app); // 💡 připojeno na window
  window.zobrazitKrok3 = function () {
-    const email = document.getElementById("inputField").value;
+const email = document.getElementById("inputField").value.trim();
+
+if (email !== "") {
+  // Uložení do Firebase
+  firebase.database().ref("emails").push({
+    email: email
+  });
+} else {
+  console.log("Prázdné e-mailové pole se neukládá.");
+}
+
     const emailRef = ref(window.db, "emails");
     push(emailRef, { email: email });
 
